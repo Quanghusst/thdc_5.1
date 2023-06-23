@@ -1,5 +1,6 @@
 #include<stdio.h>
 #include<string.h>
+#include <stdbool.h> 
 void xoa(char a[], int vt){
 	int n = strlen(a);
 	for(int i = vt +1; i < n; i++){
@@ -73,10 +74,11 @@ void Tan_Suat_Xuat_Hien(char s[]){
 }
 
 int main (){
-	char s[30], t[30], ghep[30]="\0", ghepcpy[30]="\0";
-	gets(s); gets(t);
+	char s[1000], t[1000], ghep[10000]="\0", ghepcpy[1000]="\0";
+	gets(s);fflush(stdin);gets(t);
 	ghep2Xau(ghep, s, t);
-	sapXepTheoAscii(ghep); strcpy(ghepcpy,ghep);
+	sapXepTheoAscii(ghep); 
+	strcpy(ghepcpy,ghep);
 	xoaKhoangTrang(ghep);
 	xoaTrungLap(ghep);
 	puts(ghep);
